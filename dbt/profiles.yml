@@ -1,0 +1,14 @@
+eyevi_profile:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: my_snowflake_account
+      user: my_snowflake_user
+      password: 🍎🍌
+      role: my_role
+      database: my_database
+      warehouse: my_warehouse
+      schema: public
+      threads: 4
+      client_session_keep_alive: False

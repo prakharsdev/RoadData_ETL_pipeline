@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  etl:
+    build: .
+    container_name: etl_container
+    environment:
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./scripts:/app/scripts
+    networks:
+      - etl_network
+    command: python scripts/data_transformation.py
+
+networks:
+  etl_network:
+    driver: bridge

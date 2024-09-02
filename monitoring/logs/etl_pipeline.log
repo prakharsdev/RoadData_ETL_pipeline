@@ -1,0 +1,29 @@
+2024-08-18 09:00:01,123 - airflow.task - INFO - Starting ETL pipeline: etl_pipeline
+2024-08-18 09:00:01,456 - airflow.task - INFO - Extracting data from Google Cloud Storage
+2024-08-18 09:00:02,789 - airflow.task - INFO - Downloading file: road_panorama_20240817_01.jpg from bucket: my-eyevi-bucket
+2024-08-18 09:00:03,234 - airflow.task - INFO - Downloading file: road_panorama_20240817_02.jpg from bucket: my-eyevi-bucket
+2024-08-18 09:00:05,678 - airflow.task - INFO - Data extraction complete. 2 files downloaded.
+2024-08-18 09:00:06,111 - airflow.task - INFO - Starting data transformation
+2024-08-18 09:00:07,345 - airflow.task - INFO - Transforming image data: road_panorama_20240817_01.jpg
+2024-08-18 09:00:08,789 - airflow.task - WARNING - Detected low-quality image: road_panorama_20240817_02.jpg - Applying enhancement
+2024-08-18 09:00:10,234 - airflow.task - INFO - Image transformation complete. Processed 2 images.
+2024-08-18 09:00:10,678 - airflow.task - INFO - Generating metadata for transformed images
+2024-08-18 09:00:12,345 - airflow.task - INFO - Metadata generated for 2 images. Preparing to load data into BigQuery
+2024-08-18 09:00:13,789 - airflow.task - INFO - Loading data into BigQuery table: my_dataset.image_metadata
+2024-08-18 09:00:15,234 - airflow.task - INFO - BigQuery load job started. Job ID: bqjob_r3a2b4c5d6e7f8
+2024-08-18 09:00:16,789 - airflow.task - INFO - BigQuery load job completed successfully.
+2024-08-18 09:00:17,123 - airflow.task - INFO - Uploading transformed images to Google Cloud Storage
+2024-08-18 09:00:18,456 - airflow.task - INFO - File uploaded: processed_road_panorama_20240817_01.jpg to bucket: my-eyevi-processed-images
+2024-08-18 09:00:19,789 - airflow.task - INFO - File uploaded: processed_road_panorama_20240817_02.jpg to bucket: my-eyevi-processed-images
+2024-08-18 09:00:20,234 - airflow.task - INFO - ETL pipeline completed successfully.
+2024-08-18 09:00:21,678 - airflow.task - INFO - Starting DBT run for additional transformations
+2024-08-18 09:00:22,345 - dbt - INFO - Running DBT model: staging_example
+2024-08-18 09:00:23,789 - dbt - INFO - DBT model staging_example completed successfully.
+2024-08-18 09:00:24,234 - dbt - INFO - Running DBT model: core_example
+2024-08-18 09:00:25,789 - dbt - INFO - DBT model core_example completed successfully.
+2024-08-18 09:00:26,123 - dbt - INFO - DBT run completed successfully.
+2024-08-18 09:00:27,456 - airflow.task - INFO - Final data available in BigQuery: my_dataset.core_example
+2024-08-18 09:00:28,789 - airflow.task - INFO - Monitoring GCP metrics: CPU Usage at 40%, Memory Usage at 30%
+2024-08-18 09:00:30,234 - airflow.task - INFO - Kubernetes auto-scaling triggered: Added 2 additional VMs to handle increased load
+2024-08-18 09:00:32,789 - airflow.task - INFO - Load balanced across 5 VMs. System operating within optimal parameters.
+2024-08-18 09:00:35,123 - airflow.task - INFO - ETL pipeline execution completed. System ready for next scheduled run.

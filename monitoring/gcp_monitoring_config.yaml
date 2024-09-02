@@ -1,0 +1,7 @@
+metrics:
+  - name: "CPU Usage"
+    type: "gce_instance/cpu/utilization"
+    filter: "resource.type = gce_instance AND metric.type = 'compute.googleapis.com/instance/cpu/utilization'"
+  - name: "Memory Usage"
+    type: "gce_instance/memory/utilization"
+    filter: "resource.type = gce_instance AND metric.type = 'compute.googleapis.com/instance/memory/utilization'"

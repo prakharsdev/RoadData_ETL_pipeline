@@ -1,0 +1,14 @@
+name: 'eyevi_dbt_project'
+version: '1.0'
+profile: 'eyevi_profile'
+target-path: 'target'
+clean-targets:
+  - 'target'
+  - 'dbt_modules'
+
+models:
+  eyevi_dbt_project:
+    staging:
+      materialized: view
+    core:
+      materialized: table
