@@ -150,7 +150,7 @@ The ETL pipeline is designed to process large-scale geospatial data:
 2. **Transformation**: The data undergoes cleaning, normalization, and aggregation using Python and DBT models.
 3. **Loading**: Processed data is loaded into BigQuery and Snowflake, with metadata and logs stored in Google Cloud Storage.
 
-For more details, refer to the [ETL Pipeline Documentation](docs/ETL Pipeline Documentation.md).
+For more details, refer to the ([ETL Pipeline Documentation](https://github.com/prakharsdev/RoadData_ETL_pipeline/blob/master/docs/ETL%20Pipeline%20Documentation.md)).
 
 ## DBT Models Overview
 
